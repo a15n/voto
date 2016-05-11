@@ -1,7 +1,10 @@
 import DS from 'ember-data';
+const attr = DS.attr;
 
 export default DS.Model.extend({
+	// relationships
 	place: DS.belongsTo('place'),
 
-	four: 4,
+	// properties
+	url: attr('string'),
 });
