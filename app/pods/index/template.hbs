@@ -1,2 +1,8 @@
-YO!
-{{outlet}}
+<p>YO!</p>
+<button {{action 'scrapeVotoAPI'}}>scrapeVotoAPI</button>
+
+<ul>
+	{{#each model as |place|}}
+		<li>{{place.name}} - #{{place.hashtag}}</li>
+	{{/each}}
+</ul>

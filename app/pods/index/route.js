@@ -2,9 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model() {
-		return this.store.findAll('post');
+		return this.store.findAll('place');
 	},
-	afterModel(m) {
-		console.log(1, m);
+	afterModel(model) {
+		let ping = model.get('firstObject');
+		console.log(ping);
 	},
 });
